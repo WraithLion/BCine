@@ -1,0 +1,452 @@
+[
+    {
+        "model": "Ensamblaje.producto",
+        "pk": 1,
+        "fields": {
+            "nombre": "Peluche Labubu Clásico",
+            "precio": "299.99",
+            "descripcion": "Peluche oficial de Labubu en tamaño mediano, perfecto para coleccionistas"
+        }
+    },
+    {
+        "model": "Ensamblaje.producto",
+        "pk": 2,
+        "fields": {
+            "nombre": "Llavero Labubu",
+            "precio": "149.50",
+            "descripcion": "Llavero decorativo con diseño de Labubu"
+        }
+    },
+    {
+        "model": "Ensamblaje.producto",
+        "pk": 3,
+        "fields": {
+            "nombre": "Set de Stickers Labubu",
+            "precio": "89.00",
+            "descripcion": "Pack de 20 stickers con diferentes diseños de Labubu"
+        }
+    },
+    {
+        "model": "Ensamblaje.producto",
+        "pk": 4,
+        "fields": {
+            "nombre": "Taza Labubu Edición Especial",
+            "precio": "199.99",
+            "descripcion": "Taza de cerámica con diseño exclusivo de Labubu"
+        }
+    },
+    {
+        "model": "Ensamblaje.producto",
+        "pk": 5,
+        "fields": {
+            "nombre": "Poster Labubu A3",
+            "precio": "129.00",
+            "descripcion": "Poster de alta calidad tamaño A3"
+        }
+    },
+    {
+        "model": "Ensamblaje.producto",
+        "pk": 6,
+        "fields": {
+            "nombre": "Mochila Labubu Mini",
+            "precio": "449.99",
+            "descripcion": "Mochila pequeña con diseño 3D de Labubu"
+        }
+    },
+    {
+        "model": "Ensamblaje.producto",
+        "pk": 7,
+        "fields": {
+            "nombre": "Camiseta Labubu Love",
+            "precio": "279.00",
+            "descripcion": "Camiseta 100% algodón con estampado de Labubu"
+        }
+    },
+    {
+        "model": "Ensamblaje.producto",
+        "pk": 8,
+        "fields": {
+            "nombre": "Gorra Labubu Snapback",
+            "precio": "249.50",
+            "descripcion": "Gorra ajustable con bordado de Labubu"
+        }
+    },
+    {
+        "model": "Ensamblaje.producto",
+        "pk": 9,
+        "fields": {
+            "nombre": "Calcetines Labubu Pack x3",
+            "precio": "159.00",
+            "descripcion": "Set de 3 pares de calcetines con diseños diferentes"
+        }
+    },
+    {
+        "model": "Ensamblaje.producto",
+        "pk": 10,
+        "fields": {
+            "nombre": "Almohada Labubu Suave",
+            "precio": "349.99",
+            "descripcion": "Almohada decorativa con forma de Labubu"
+        }
+    },
+    {
+        "model": "Ensamblaje.producto",
+        "pk": 11,
+        "fields": {
+            "nombre": "Libreta Labubu A5",
+            "precio": "119.00",
+            "descripcion": "Libreta de 100 hojas con portada de Labubu"
+        }
+    },
+    {
+        "model": "Ensamblaje.producto",
+        "pk": 12,
+        "fields": {
+            "nombre": "Set de Plumas Labubu",
+            "precio": "99.50",
+            "descripcion": "Pack de 5 plumas de gel con diseños de Labubu"
+        }
+    },
+    {
+        "model": "Ensamblaje.producto",
+        "pk": 13,
+        "fields": {
+            "nombre": "Mousepad Labubu XXL",
+            "precio": "189.00",
+            "descripcion": "Alfombrilla para mouse tamaño extendido"
+        }
+    },
+    {
+        "model": "Ensamblaje.producto",
+        "pk": 14,
+        "fields": {
+            "nombre": "Funda para Celular Labubu",
+            "precio": "169.99",
+            "descripcion": "Funda protectora compatible con varios modelos"
+        }
+    },
+    {
+        "model": "Ensamblaje.producto",
+        "pk": 15,
+        "fields": {
+            "nombre": "Termo Labubu 500ml",
+            "precio": "299.00",
+            "descripcion": "Termo térmico de acero inoxidable"
+        }
+    },
+    {
+        "model": "Ensamblaje.producto",
+        "pk": 16,
+        "fields": {
+            "nombre": "Pin Coleccionable Labubu",
+            "precio": "79.50",
+            "descripcion": "Pin esmaltado de edición limitada"
+        }
+    },
+    {
+        "model": "Ensamblaje.producto",
+        "pk": 17,
+        "fields": {
+            "nombre": "Paraguas Labubu Automático",
+            "precio": "329.99",
+            "descripcion": "Paraguas plegable con estampado de Labubu"
+        }
+    },
+    {
+        "model": "Ensamblaje.producto",
+        "pk": 18,
+        "fields": {
+            "nombre": "Cobija Labubu Polar",
+            "precio": "549.00",
+            "descripcion": "Cobija suave de 150x200cm"
+        }
+    },
+    {
+        "model": "Ensamblaje.producto",
+        "pk": 19,
+        "fields": {
+            "nombre": "Pijama Labubu Adulto",
+            "precio": "429.99",
+            "descripcion": "Pijama de dos piezas con estampado completo"
+        }
+    },
+    {
+        "model": "Ensamblaje.producto",
+        "pk": 20,
+        "fields": {
+            "nombre": "Set de Imanes Labubu",
+            "precio": "139.00",
+            "descripcion": "Pack de 12 imanes decorativos para refrigerador"
+        }
+    },
+    {
+        "model": "Ensamblaje.ulthwe",
+        "pk": 1,
+        "fields": {
+            "nombre": "Original",
+            "color": "Rosa pastel",
+            "precio": "450.00"
+        }
+    },
+    {
+        "model": "Ensamblaje.ulthwe",
+        "pk": 2,
+        "fields": {
+            "nombre": "Deluxe",
+            "color": "Azul cielo",
+            "precio": "599.99"
+        }
+    },
+    {
+        "model": "Ensamblaje.ulthwe",
+        "pk": 3,
+        "fields": {
+            "nombre": "Mini",
+            "color": "Morado",
+            "precio": "299.00"
+        }
+    },
+    {
+        "model": "Ensamblaje.ulthwe",
+        "pk": 4,
+        "fields": {
+            "nombre": "Gigante",
+            "color": "Blanco",
+            "precio": "899.50"
+        }
+    },
+    {
+        "model": "Ensamblaje.ulthwe",
+        "pk": 5,
+        "fields": {
+            "nombre": "Edición Limitada",
+            "color": "Dorado",
+            "precio": "1299.99"
+        }
+    },
+    {
+        "model": "Ensamblaje.ulthwe",
+        "pk": 6,
+        "fields": {
+            "nombre": "Navideño",
+            "color": "Rojo y verde",
+            "precio": "549.00"
+        }
+    },
+    {
+        "model": "Ensamblaje.ulthwe",
+        "pk": 7,
+        "fields": {
+            "nombre": "Kawaii",
+            "color": "Rosa chicle",
+            "precio": "399.99"
+        }
+    },
+    {
+        "model": "Ensamblaje.ulthwe",
+        "pk": 8,
+        "fields": {
+            "nombre": "Arcoíris",
+            "color": "Multicolor",
+            "precio": "650.00"
+        }
+    },
+    {
+        "model": "Ensamblaje.ulthwe",
+        "pk": 9,
+        "fields": {
+            "nombre": "Neón",
+            "color": "Verde fluorescente",
+            "precio": "499.00"
+        }
+    },
+    {
+        "model": "Ensamblaje.ulthwe",
+        "pk": 10,
+        "fields": {
+            "nombre": "Galáctico",
+            "color": "Plateado con purpurina",
+            "precio": "749.99"
+        }
+    },
+    {
+        "model": "Ensamblaje.ulthwe",
+        "pk": 11,
+        "fields": {
+            "nombre": "Vintage",
+            "color": "Beige",
+            "precio": "425.50"
+        }
+    },
+    {
+        "model": "Ensamblaje.ulthwe",
+        "pk": 12,
+        "fields": {
+            "nombre": "Tropical",
+            "color": "Turquesa",
+            "precio": "479.00"
+        }
+    },
+    {
+        "model": "Ensamblaje.ulthwe",
+        "pk": 13,
+        "fields": {
+            "nombre": "Gótico",
+            "color": "Negro mate",
+            "precio": "529.99"
+        }
+    },
+    {
+        "model": "Ensamblaje.ulthwe",
+        "pk": 14,
+        "fields": {
+            "nombre": "Primavera",
+            "color": "Amarillo suave",
+            "precio": "389.00"
+        }
+    },
+    {
+        "model": "Ensamblaje.ulthwe",
+        "pk": 15,
+        "fields": {
+            "nombre": "Otoño",
+            "color": "Naranja calabaza",
+            "precio": "419.50"
+        }
+    },
+    {
+        "model": "Ensamblaje.ulthwe",
+        "pk": 16,
+        "fields": {
+            "nombre": "Invierno",
+            "color": "Azul glaciar",
+            "precio": "459.99"
+        }
+    },
+    {
+        "model": "Ensamblaje.ulthwe",
+        "pk": 17,
+        "fields": {
+            "nombre": "Verano",
+            "color": "Coral",
+            "precio": "439.00"
+        }
+    },
+    {
+        "model": "Ensamblaje.ulthwe",
+        "pk": 18,
+        "fields": {
+            "nombre": "Cyberpunk",
+            "color": "Fucsia eléctrico",
+            "precio": "699.99"
+        }
+    },
+    {
+        "model": "Ensamblaje.ulthwe",
+        "pk": 19,
+        "fields": {
+            "nombre": "Retro",
+            "color": "Verde menta",
+            "precio": "449.00"
+        }
+    },
+    {
+        "model": "Ensamblaje.ulthwe",
+        "pk": 20,
+        "fields": {
+            "nombre": "Dulce",
+            "color": "Rosa algodón de azúcar",
+            "precio": "379.50"
+        }
+    },
+    {
+        "model": "Ensamblaje.ulthwe",
+        "pk": 21,
+        "fields": {
+            "nombre": "Místico",
+            "color": "Violeta profundo",
+            "precio": "559.99"
+        }
+    },
+    {
+        "model": "Ensamblaje.ulthwe",
+        "pk": 22,
+        "fields": {
+            "nombre": "Safari",
+            "color": "Marrón caramelo",
+            "precio": "489.00"
+        }
+    },
+    {
+        "model": "Ensamblaje.ulthwe",
+        "pk": 23,
+        "fields": {
+            "nombre": "Océano",
+            "color": "Azul marino",
+            "precio": "519.50"
+        }
+    },
+    {
+        "model": "Ensamblaje.ulthwe",
+        "pk": 24,
+        "fields": {
+            "nombre": "Bosque",
+            "color": "Verde musgo",
+            "precio": "469.99"
+        }
+    },
+    {
+        "model": "Ensamblaje.ulthwe",
+        "pk": 25,
+        "fields": {
+            "nombre": "Desierto",
+            "color": "Arena dorada",
+            "precio": "439.00"
+        }
+    },
+    {
+        "model": "Ensamblaje.ulthwe",
+        "pk": 26,
+        "fields": {
+            "nombre": "Aurora",
+            "color": "Verde aurora boreal",
+            "precio": "799.99"
+        }
+    },
+    {
+        "model": "Ensamblaje.ulthwe",
+        "pk": 27,
+        "fields": {
+            "nombre": "Caramelo",
+            "color": "Rojo cereza",
+            "precio": "359.00"
+        }
+    },
+    {
+        "model": "Ensamblaje.ulthwe",
+        "pk": 28,
+        "fields": {
+            "nombre": "Pastelito",
+            "color": "Lavanda",
+            "precio": "399.50"
+        }
+    },
+    {
+        "model": "Ensamblaje.ulthwe",
+        "pk": 29,
+        "fields": {
+            "nombre": "Estrella",
+            "color": "Blanco brillante",
+            "precio": "679.99"
+        }
+    },
+    {
+        "model": "Ensamblaje.ulthwe",
+        "pk": 30,
+        "fields": {
+            "nombre": "Luna",
+            "color": "Gris perla",
+            "precio": "629.00"
+        }
+    }
+]

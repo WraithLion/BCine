@@ -1,5 +1,5 @@
 # Define AQUI el nombre del entorno virtual de Conda que se creará
-name: Astronave
+name: Humanosoft
 
 #Especificamos el canal (repositorios) de donde Conda descargará los paquetes
 channels:

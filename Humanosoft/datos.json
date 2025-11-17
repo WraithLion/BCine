@@ -1,6 +1,6 @@
 [
     {
-        "model": "Ensamblaje.producto",
+        "model": "BCine.producto",
         "pk": 1,
         "fields": {
             "nombre": "Peluche Labubu Clásico",
@@ -9,7 +9,7 @@
         }
     },
     {
-        "model": "Ensamblaje.producto",
+        "model": "BCine.producto",
         "pk": 2,
         "fields": {
             "nombre": "Llavero Labubu",
@@ -18,7 +18,7 @@
         }
     },
     {
-        "model": "Ensamblaje.producto",
+        "model": "BCine.producto",
         "pk": 3,
         "fields": {
             "nombre": "Set de Stickers Labubu",
@@ -27,7 +27,7 @@
         }
     },
     {
-        "model": "Ensamblaje.producto",
+        "model": "BCine.producto",
         "pk": 4,
         "fields": {
             "nombre": "Taza Labubu Edición Especial",
@@ -36,7 +36,7 @@
         }
     },
     {
-        "model": "Ensamblaje.producto",
+        "model": "BCine.producto",
         "pk": 5,
         "fields": {
             "nombre": "Poster Labubu A3",
@@ -45,7 +45,7 @@
         }
     },
     {
-        "model": "Ensamblaje.producto",
+        "model": "BCine.producto",
         "pk": 6,
         "fields": {
             "nombre": "Mochila Labubu Mini",
@@ -54,7 +54,7 @@
         }
     },
     {
-        "model": "Ensamblaje.producto",
+        "model": "BCine.producto",
         "pk": 7,
         "fields": {
             "nombre": "Camiseta Labubu Love",
@@ -63,7 +63,7 @@
         }
     },
     {
-        "model": "Ensamblaje.producto",
+        "model": "BCine.producto",
         "pk": 8,
         "fields": {
             "nombre": "Gorra Labubu Snapback",
@@ -72,7 +72,7 @@
         }
     },
     {
-        "model": "Ensamblaje.producto",
+        "model": "BCine.producto",
         "pk": 9,
         "fields": {
             "nombre": "Calcetines Labubu Pack x3",
@@ -81,7 +81,7 @@
         }
     },
     {
-        "model": "Ensamblaje.producto",
+        "model": "BCine.producto",
         "pk": 10,
         "fields": {
             "nombre": "Almohada Labubu Suave",
@@ -90,7 +90,7 @@
         }
     },
     {
-        "model": "Ensamblaje.producto",
+        "model": "BCine.producto",
         "pk": 11,
         "fields": {
             "nombre": "Libreta Labubu A5",
@@ -99,7 +99,7 @@
         }
     },
     {
-        "model": "Ensamblaje.producto",
+        "model": "BCine.producto",
         "pk": 12,
         "fields": {
             "nombre": "Set de Plumas Labubu",
@@ -108,7 +108,7 @@
         }
     },
     {
-        "model": "Ensamblaje.producto",
+        "model": "BCine.producto",
         "pk": 13,
         "fields": {
             "nombre": "Mousepad Labubu XXL",
@@ -117,7 +117,7 @@
         }
     },
     {
-        "model": "Ensamblaje.producto",
+        "model": "BCine.producto",
         "pk": 14,
         "fields": {
             "nombre": "Funda para Celular Labubu",
@@ -126,7 +126,7 @@
         }
     },
     {
-        "model": "Ensamblaje.producto",
+        "model": "BCine.producto",
         "pk": 15,
         "fields": {
             "nombre": "Termo Labubu 500ml",
@@ -135,7 +135,7 @@
         }
     },
     {
-        "model": "Ensamblaje.producto",
+        "model": "BCine.producto",
         "pk": 16,
         "fields": {
             "nombre": "Pin Coleccionable Labubu",
@@ -144,7 +144,7 @@
         }
     },
     {
-        "model": "Ensamblaje.producto",
+        "model": "BCine.producto",
         "pk": 17,
         "fields": {
             "nombre": "Paraguas Labubu Automático",
@@ -153,7 +153,7 @@
         }
     },
     {
-        "model": "Ensamblaje.producto",
+        "model": "BCine.producto",
         "pk": 18,
         "fields": {
             "nombre": "Cobija Labubu Polar",
@@ -162,7 +162,7 @@
         }
     },
     {
-        "model": "Ensamblaje.producto",
+        "model": "BCine.producto",
         "pk": 19,
         "fields": {
             "nombre": "Pijama Labubu Adulto",
@@ -171,7 +171,7 @@
         }
     },
     {
-        "model": "Ensamblaje.producto",
+        "model": "BCine.producto",
         "pk": 20,
         "fields": {
             "nombre": "Set de Imanes Labubu",
@@ -180,7 +180,7 @@
         }
     },
     {
-        "model": "Ensamblaje.ulthwe",
+        "model": "BCine.ulthwe",
         "pk": 1,
         "fields": {
             "nombre": "Original",
@@ -189,7 +189,7 @@
         }
     },
     {
-        "model": "Ensamblaje.ulthwe",
+        "model": "BCine.ulthwe",
         "pk": 2,
         "fields": {
             "nombre": "Deluxe",
@@ -198,7 +198,7 @@
         }
     },
     {
-        "model": "Ensamblaje.ulthwe",
+        "model": "BCine.ulthwe",
         "pk": 3,
         "fields": {
             "nombre": "Mini",
@@ -207,7 +207,7 @@
         }
     },
     {
-        "model": "Ensamblaje.ulthwe",
+        "model": "BCine.ulthwe",
         "pk": 4,
         "fields": {
             "nombre": "Gigante",
@@ -216,7 +216,7 @@
         }
     },
     {
-        "model": "Ensamblaje.ulthwe",
+        "model": "BCine.ulthwe",
         "pk": 5,
         "fields": {
             "nombre": "Edición Limitada",
@@ -225,7 +225,7 @@
         }
     },
     {
-        "model": "Ensamblaje.ulthwe",
+        "model": "BCine.ulthwe",
         "pk": 6,
         "fields": {
             "nombre": "Navideño",
@@ -234,7 +234,7 @@
         }
     },
     {
-        "model": "Ensamblaje.ulthwe",
+        "model": "BCine.ulthwe",
         "pk": 7,
         "fields": {
             "nombre": "Kawaii",
@@ -243,7 +243,7 @@
         }
     },
     {
-        "model": "Ensamblaje.ulthwe",
+        "model": "BCine.ulthwe",
         "pk": 8,
         "fields": {
             "nombre": "Arcoíris",
@@ -252,7 +252,7 @@
         }
     },
     {
-        "model": "Ensamblaje.ulthwe",
+        "model": "BCine.ulthwe",
         "pk": 9,
         "fields": {
             "nombre": "Neón",
@@ -261,7 +261,7 @@
         }
     },
     {
-        "model": "Ensamblaje.ulthwe",
+        "model": "BCine.ulthwe",
         "pk": 10,
         "fields": {
             "nombre": "Galáctico",
@@ -270,7 +270,7 @@
         }
     },
     {
-        "model": "Ensamblaje.ulthwe",
+        "model": "BCine.ulthwe",
         "pk": 11,
         "fields": {
             "nombre": "Vintage",
@@ -279,7 +279,7 @@
         }
     },
     {
-        "model": "Ensamblaje.ulthwe",
+        "model": "BCine.ulthwe",
         "pk": 12,
         "fields": {
             "nombre": "Tropical",
@@ -288,7 +288,7 @@
         }
     },
     {
-        "model": "Ensamblaje.ulthwe",
+        "model": "BCine.ulthwe",
         "pk": 13,
         "fields": {
             "nombre": "Gótico",
@@ -297,7 +297,7 @@
         }
     },
     {
-        "model": "Ensamblaje.ulthwe",
+        "model": "BCine.ulthwe",
         "pk": 14,
         "fields": {
             "nombre": "Primavera",
@@ -306,7 +306,7 @@
         }
     },
     {
-        "model": "Ensamblaje.ulthwe",
+        "model": "BCine.ulthwe",
         "pk": 15,
         "fields": {
             "nombre": "Otoño",
@@ -315,7 +315,7 @@
         }
     },
     {
-        "model": "Ensamblaje.ulthwe",
+        "model": "BCine.ulthwe",
         "pk": 16,
         "fields": {
             "nombre": "Invierno",
@@ -324,7 +324,7 @@
         }
     },
     {
-        "model": "Ensamblaje.ulthwe",
+        "model": "BCine.ulthwe",
         "pk": 17,
         "fields": {
             "nombre": "Verano",
@@ -333,7 +333,7 @@
         }
     },
     {
-        "model": "Ensamblaje.ulthwe",
+        "model": "BCine.ulthwe",
         "pk": 18,
         "fields": {
             "nombre": "Cyberpunk",
@@ -342,7 +342,7 @@
         }
     },
     {
-        "model": "Ensamblaje.ulthwe",
+        "model": "BCine.ulthwe",
         "pk": 19,
         "fields": {
             "nombre": "Retro",
@@ -351,7 +351,7 @@
         }
     },
     {
-        "model": "Ensamblaje.ulthwe",
+        "model": "BCine.ulthwe",
         "pk": 20,
         "fields": {
             "nombre": "Dulce",
@@ -360,7 +360,7 @@
         }
     },
     {
-        "model": "Ensamblaje.ulthwe",
+        "model": "BCine.ulthwe",
         "pk": 21,
         "fields": {
             "nombre": "Místico",
@@ -369,7 +369,7 @@
         }
     },
     {
-        "model": "Ensamblaje.ulthwe",
+        "model": "BCine.ulthwe",
         "pk": 22,
         "fields": {
             "nombre": "Safari",
@@ -378,7 +378,7 @@
         }
     },
     {
-        "model": "Ensamblaje.ulthwe",
+        "model": "BCine.ulthwe",
         "pk": 23,
         "fields": {
             "nombre": "Océano",
@@ -387,7 +387,7 @@
         }
     },
     {
-        "model": "Ensamblaje.ulthwe",
+        "model": "BCine.ulthwe",
         "pk": 24,
         "fields": {
             "nombre": "Bosque",
@@ -396,7 +396,7 @@
         }
     },
     {
-        "model": "Ensamblaje.ulthwe",
+        "model": "BCine.ulthwe",
         "pk": 25,
         "fields": {
             "nombre": "Desierto",
@@ -405,7 +405,7 @@
         }
     },
     {
-        "model": "Ensamblaje.ulthwe",
+        "model": "BCine.ulthwe",
         "pk": 26,
         "fields": {
             "nombre": "Aurora",
@@ -414,7 +414,7 @@
         }
     },
     {
-        "model": "Ensamblaje.ulthwe",
+        "model": "BCine.ulthwe",
         "pk": 27,
         "fields": {
             "nombre": "Caramelo",
@@ -423,7 +423,7 @@
         }
     },
     {
-        "model": "Ensamblaje.ulthwe",
+        "model": "BCine.ulthwe",
         "pk": 28,
         "fields": {
             "nombre": "Pastelito",
@@ -432,7 +432,7 @@
         }
     },
     {
-        "model": "Ensamblaje.ulthwe",
+        "model": "BCine.ulthwe",
         "pk": 29,
         "fields": {
             "nombre": "Estrella",
@@ -441,7 +441,7 @@
         }
     },
     {
-        "model": "Ensamblaje.ulthwe",
+        "model": "BCine.ulthwe",
         "pk": 30,
         "fields": {
             "nombre": "Luna",

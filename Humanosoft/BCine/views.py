@@ -3,11 +3,13 @@ from django.shortcuts import render
 from .models import Producto, Ulthwe
 # Create your views here.
 
-def index(request):
+#Sitio principal de BCine
+
+def sitio_principal(request):
     #Realización de una consulta muestra
     producto1= Ulthwe.objects.get(nombre='Original',
                                   color='Rosa pastel')
-    return render(request, "index.html",{'producto1':producto1})
+    return render(request, "sitio_principal.html",{'producto1':producto1})
 
 def todosproductos(request):
     #Realización de una consulta muestra

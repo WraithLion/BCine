@@ -24,14 +24,14 @@
 
 <body>
 <!--    Encabezado de la página -->
-<h1>Todos los productos</h1>
-{% for x in todos_productos%}
+<h1>Peliculas Ciencia Ficción</h1>
+{% for x in peliculasFC%}
     <tr>
     <div class="card"> <!--  Inicia el entorno para añadir contenido  -->
         <img src="algo.png" alt="Avatar" style="width:100%"> <!--  Carga la imagen del producto  -->
         <div class="container"> <!--  Inicia entorno para mostrar los datos del producto  -->
             <h4><b>{{x.nombre}}</b></h4> <!-- Muestra el nombre del producto   -->
-            <p>{{x.precio}}</p> <!--  Muestra el precio del producto   -->
+            <p>{{x.director}}</p> <!--  Muestra el precio del producto   -->
             <a href="#" class="btn btn-primary"> Añadir al carrito</a>
         </div><!--  Finaliza el entorno para mostrar el contenido  -->
     </div> <!--  Finaliza la tarjeta para mostrar el producto  -->

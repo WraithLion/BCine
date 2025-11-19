@@ -8,19 +8,44 @@
 </head>
 
 <body>
-    <nav> <!-- Barra de navegacion -->
-    <a href=""> Principal </a>
-    <a href=""> Géneros </a>
-    <a href=""> Cuenta </a>
+<div class="header">
+    <p>BCine</p>
+    <p>{{todos_productos}}</p>
+</div>
+
+<nav> <!-- Barra de navegacion -->
+    <a href="/"> Principal </a> <!--Boton que direcciona a la página principal de BCine-->
+    <a href="/productos/"> Géneros </a> <!--Boton que muestra despliega los géneros de película-->
+    <a href="/ingresar/"> Cuenta </a> <!--Boton que despliega dos opciones "Crear cuenta" e "Iniciar sesion"-->
     <span></span>
     </nav>
-</body>
-<section>
-    <div class="card">
-        <img class="img" src="https://imgs.search.brave.com/jXngnu6tfKjUe0ow6gODmGbHA1W1keyC9myg_LafEm8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/c3VwZXJhZmljaW9u/YWRvcy5jb20vaW1h/Z2VuZXMvNi1sYXMt/bWVqb3Jlcy1wZWxp/Y3VsYXMtZGUtZHJh/bWEtdW4tdHJhbnZp/YS1sbGFtYWRvLWRl/c2VvLmpwZw" alt="peli">
-        <h4 class="heading" ></h4>
-        <p class="description"> ALGO ASI </p>
-        <button class="btn"> Ver </button>
+
+<!-- Contenedor de productos -->
+<div class="container">
+{% for x in peliculasD %}
+    <div class="card" data-nombre="{{ x.nombre }}">
+        <div class="card-image">
+            <!-- Django static file syntax preserved -->
+            <img src="{{ x.imagen }}" alt="{{ x.nombre }}" onerror="this.style.display='none'; this.parentElement.innerHTML='✨'">
+        </div>
+        <div class="card-content">
+            <h4><b>{{ x.nombre }}</b></h4>
+            {% if x.descripcion %}
+            <p class="description">{{ x.descripcion }}</p>
+            {% endif %}
+            <div class="price">{{ x.director }}</div>
+            <button class="btn">Ver más</button>
+        </div>
     </div>
-</section>
+{% endfor %}
+</div>
+
+<!-- Pie de página -->
+<div class="footer">
+    <a href="https://github.com/WraithLion/BCine.git">BCine</a> © 2025 by <a href="https://sites.google.com/ciencias.unam.mx/humanosoft/inicio">Humanosoft</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+<br>This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+</div>
+
+</body>
+
 </html>

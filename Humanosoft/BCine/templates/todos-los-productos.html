@@ -20,12 +20,7 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #fef3f9, #f3e7ff, #e7f3ff);
-    min-height: 100vh;
-    padding: 20px;
-}
+
 
 .header {
     text-align: center;
@@ -224,13 +219,13 @@ body {
 <body>
 <!-- Encabezado de la página -->
 <div class="header">
-    <h1>🌈 Mundo Astronave ✨</h1>
-    <p>¡Colección completa de productos Labubu!</p>
+    <h1>🌈 Fantasía ✨</h1>
+    <p>¡Colección de películas!</p>
 </div>
 
 <!-- Contenedor de productos -->
 <div class="container">
-{% for x in todos_productos %}
+{% for x in peliculasF %}
     <div class="card" data-nombre="{{ x.nombre }}">
         <div class="card-image">
             <!-- Django static file syntax preserved -->
@@ -241,7 +236,7 @@ body {
             {% if x.descripcion %}
             <p class="description">{{ x.descripcion }}</p>
             {% endif %}
-            <div class="price">${{ x.precio }}</div>
+            <div class="price">${{ x.director }}</div>
             <button class="btn">Añadir al carrito</button>
         </div>
     </div>

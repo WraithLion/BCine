@@ -11,7 +11,9 @@ dependencies:
     - django==4.1.6
     - django-crispy-forms==1.14.0 
     - django-environ==0.9.0
+    - Pillow
   - folium=0.14.0
+
  
 
 # Define la ruta base donde Conda está instalado en TU SISTEMA

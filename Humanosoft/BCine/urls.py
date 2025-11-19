@@ -13,5 +13,9 @@ path('productos/',views.todosproductos,name='todos-los-productos'),
 
 path('productosNoIA/',views.todosproductosNoIA,name='todos-los-productos-sin-IA'),
 
+path('ingresar/',views.ingresar,name='chatbot'),
+
+path('ver/',views.ver,name='Detalles_Pelicula'),
+
 
 ]

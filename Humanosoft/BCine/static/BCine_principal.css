@@ -161,4 +161,17 @@ nav a:nth-child(3):hover~span{
 }
 
 
+#masPelis {
+width: calc((100% / 3) - 8px);
+padding: 16px;
+background-color:#fbbd61;
+border: none;
+cursor: pointer;
+transition: all 200ms ease-in-out;
+border-radius: 3px;
+font-size: 0.75rem;
+text-transform: uppercase;
+letter-spacing: 0.15rem;
+}
+
 

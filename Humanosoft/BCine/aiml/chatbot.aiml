@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+  <!-- Saludo -->
+  <category>
+    <pattern>HOLA</pattern>
+    <template>Hola! Soy PAMY2.0, Mis servicios son: Servicio 1, Servicio2. ¿Qué se te ofrece?</template>
+  </category>
+<!-- Buenos días -->
+<category>
+  <pattern>BUENOS DIAS</pattern>
+  <template>
+    <random>
+      <li>¡Buenos días! Espero que tengas un excelente día.</li>
+      <li>¡Buenos días! Soy PAMY2.0, Mis servicios son: Servicio 1, Servicio2. ¿Qué se te ofrece?</li>
+    </random>
+  </template>
+</category>
+
+<category>
+  <pattern>BUENAS TARDES</pattern>
+  <template>¡Buenas tardes! ¿En qué puedo ayudarte?</template>
+</category>
+
+<!-- Despedidas -->
+<category>
+  <pattern>ADIOS</pattern>
+  <template>¡Hasta luego! Fue un placer conversar contigo.</template>
+</category>
+
+<category>
+  <pattern>HASTA LUEGO</pattern>
+  <template>¡Hasta pronto! Vuelve cuando quieras.</template>
+</category>
+
+<!--USO DE WILDCARDS(*)-->
+<!-- Capturar nombre -->
+<category>
+  <pattern>MI NOMBRE ES *</pattern>
+  <template>Encantado de conocerte, <star/>. ¿En qué puedo ayudarte hoy?</template>
+</category>
+
+<category>
+  <pattern>ME LLAMO *</pattern>
+  <template>¡Hola <star/>! Es un placer conocerte.</template>
+</category>
+
+<!--USO DE SRAI(Reduccion de sinonimos)-->
+<!-- Definir respuesta base -->
+<category>
+  <pattern>COMO ESTAS</pattern>
+  <template>¡Muy bien, gracias por preguntar! ¿Y tú?</template>
+</category>
+
+<!-- Sinónimos que redirigen -->
+<category>
+  <pattern>QUE TAL</pattern>
+  <template><srai>COMO ESTAS</srai></template>
+</category>
+
+<category>
+  <pattern>COMO VAS</pattern>
+  <template><srai>COMO ESTAS</srai></template>
+</category>
+
+<!-- Para despedidas -->
+<category>
+  <pattern>CHAO</pattern>
+  <template><srai>ADIOS</srai></template>
+</category>
+
+<category>
+  <pattern>NOS VEMOS</pattern>
+  <template><srai>ADIOS</srai></template>
+</category>
+<!--Random-->
+<category>
+  <pattern>CUENTAME UN CHISTE</pattern>
+  <template>
+    <random>
+      <li>¿Por qué los programadores prefieren el modo oscuro? Porque la luz atrae bugs.</li>
+      <li>¿Cuál es el colmo de un programador? Que se le vaya el apetito.</li>
+      <li>¿Qué le dice un bit al otro? Nos vemos en el bus.</li>
+    </random>
+  </template>
+</category>
+</aiml>

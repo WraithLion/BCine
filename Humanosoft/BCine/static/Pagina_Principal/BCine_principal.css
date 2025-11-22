@@ -1,11 +1,20 @@
+.header {
+    text-align: center;
+    width:auto;
+    padding: 2px 2px;
+    background: linear-gradient(135deg, #fbbd61);
+    border-radius: 20px;
+    margin-bottom: 0;
+    box-shadow: 0 12px 32px rgba(255, 107, 157, 0.3);
+}
+
 nav{
     position:relative;
-    width:300px;
+    width:100%;
     height:50px;
     background:#d8d8d8;
     border-radius:10px;
     display:flex;
-
     justify-content: center;
     align-items:center;
 }
@@ -49,14 +58,7 @@ nav a:nth-child(3):hover~span{
     width:45%;
 }
 
-.header {
-    text-align: center;
-    padding: 20px 10px;
-    background: linear-gradient(135deg, #fbbd61);
-    border-radius: 20px;
-    margin-bottom: 0;
-    box-shadow: 0 12px 32px rgba(255, 107, 157, 0.3);
-}
+
 
 .btn{
     margin-top:auto;
@@ -84,8 +86,13 @@ nav a:nth-child(3):hover~span{
 @media (max-width: 768px) {
     .header h1 {
         font-size: 2em;
+        width:100%;
     }
-
+    nav{
+        display:inline-block;
+        width:auto;
+        white-space:nowrap;
+    }
     .container {
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
         gap: 20px;
@@ -158,6 +165,13 @@ nav a:nth-child(3):hover~span{
     font-size: 4em;
     position: relative;
     overflow: hidden;
+}
+/* Tipografia para BCine Sitio Principal */
+@font-face {
+    font-family: 'Cinema St Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Cinema St Regular'), url('cinema_st.woff') format('woff');
 }
 
 

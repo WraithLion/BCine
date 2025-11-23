@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/static/Pagina_Fantasia/Fantasia.css">
+<title>BCine - Peliculas Fantasía</title>
+
+</head>
+
+<body>
+<!-- Encabezado de la página -->
+<div class="header">
+    <h1 style="font-family:'Magic School One Regular';font-weight:normal;font-size:65px">🌈 Fantasía ✨</h1>
+    <p style="font-family:'Magic School One Regular';font-weight:normal;font-size:50px">¡Colección de películas!</p>
+</div>
+
+<!-- Contenedor de productos -->
+<div class="container">
+{% for x in peliculasF %}
+    <div class="card" data-nombre="{{ x.nombre }}">
+        <div class="card-image">
+            <!-- Django static file syntax preserved -->
+            <img src="{{ x.imagen }}" alt="{{ x.nombre }}" onerror="this.style.display='none'; this.parentElement.innerHTML='✨'">
+        </div>
+        <div class="card-content">
+            <h4 style="font-family:'Magic School One Regular';font-weight:normal;font-size:36px"><b>{{ x.nombre }}</b></h4>
+            {% if x.director%} <!--Muestra el nombre del director de la película-->
+            <div style="font-family:'Magic School One Regular';font-weight:normal;font-size:28px" class="director">{{ x.director }}</div>
+            {% endif%}
+            {% if x.descripcion %}
+            <p style="font-family:'Magic School One Regular';font-weight:normal;font-size:24px" class="description">{{ x.descripcion }}</p>
+            {% endif %}
+            <button style="font-family:'Magic School One Regular';font-weight:normal;font-size:28px" class="btn">Ver</button>
+        </div>
+    </div>
+{% endfor %}
+</div>
+
+<!-- Pie de página -->
+<div class="footer" style="font-family:'Magic School One Regular';font-weight:normal;font-size:24px">
+<div class="emoji">🌟✨🌈</div>
+    <a href="https://github.com/WraithLion/BCine.git">BCine</a> © 2025 by <a href="https://sites.google.com/ciencias.unam.mx/humanosoft/inicio">Humanosoft</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+<br>This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+</div>
+
+<script>
+// Animación suave al cargar las tarjetas
+document.addEventListener('DOMContentLoaded', function() {
+    const cards = document.querySelectorAll('.card');
+    cards.forEach((card, index) => {
+        card.style.animationDelay = `${index * 0.05}s`;
+    });
+    
+    // Funcionalidad del botón añadir al carrito
+    document.querySelectorAll('.btn').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            // Aquí puedes agregar la funcionalidad de Django para añadir al carrito
+            alert('¡Producto añadido al carrito! 🎉');
+        });
+    });
+});
+</script>
+
+</body>
+</html>

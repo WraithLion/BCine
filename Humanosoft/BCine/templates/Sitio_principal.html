@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BCine</title>
+<link rel="stylesheet" href="/static/Pagina_Principal/BCine_principal.css">
+</head>
+
+<body>
+<div class="header">
+    <p style="font-family:'Cinema St Regular';font-weight:normal;font-size:56px">BCine</p>
+</div>
+
+<div class="wrappper">
+        <input  hidden="" class="radio-1" name="radio" id="radio-1" type="radio" checked="" onclick="parent.location='/BCine/'"/>
+        <label style="--index: 0;" class="label" for="radio-1"><span>Inicio</span></label>
+
+        <input hidden="" class="radio-2" name="radio" id="radio-2" type="radio" onclick="parent.location='/BCine/Drama'"/>
+        <label style="--index: 1;" class="label" for="radio-2"><span>Generos</span></label>
+
+        <input hidden="" class="radio-3" name="radio" id="radio-3" type="radio" onclick="parent.location='/BCine/Cuenta'"/>
+        <label style="--index: 2;"  class="label" for="radio-3"><span >Cuenta</span></label>
+
+        <div class="bar"></div>
+        <div class="slidebar"></div>
+</div>
+
+
+
+
+<!-- Contenedor de productos -->
+<div id="contenedor" class="container">
+{% for x in peliculasD %}
+    <div class="card" data-nombre="{{ x.nombre }}">
+        <div class="card-image">
+            <!-- Django static file syntax preserved -->
+            <img src="{{ x.imagen }}" alt="{{ x.nombre }}" onerror="this.style.display='none'; this.parentElement.innerHTML='✨'">
+        </div>
+        <div class="card-content">
+            <h4><b>{{ x.nombre }}</b></h4>
+            {% if x.descripcion %}
+            <p class="description">{{ x.descripcion }}</p>
+            {% endif %}
+            <div class="price">{{ x.director }}</div>
+            <button class="btn">Ver más</button>
+        </div>
+    </div>
+{% endfor %}
+</div>
+<!--<button id="masPelis" class="loadMore">  Más películas </button>-->
+
+<!-- Pie de página -->
+<div class="footer" style="font-family:'Cinema St Regular';font-weight:normal;font-size:20px">
+    <a href="https://github.com/WraithLion/BCine.git">BCine</a> © 2025 by <a href="https://sites.google.com/ciencias.unam.mx/humanosoft/inicio">Humanosoft</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+<br>This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+</div>
+<!--<script src="/static/MostrarMas.js"></script>-->
+
+
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/static/Pagina_Drama/Drama.css">
+
+  <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"/>
+  <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"/>
+</svg>
+<title>BCine - Peliculas Drama</title>
+</head>
+<body>
+<!-- Encabezado de la página -->
+<div class="header">
+    <h1 style="font-family:'Welcome Drama Regular';font-weight:normal;font-size:42px">Drama</h1>
+    <p style="font-family:'Welcome Drama Regular';font-weight:normal;font-size:42px">¡Coleccion de películas!</p>
+</div>
+
+<!-- Cartelera de peliculas -->
+<div class="container">
+{% for x in peliculasD %}
+    <div class="card" data-nombre="{{ x.nombre }}"><!--  Inicia el entorno para añadir contenido  -->
+        <div class="card-image">
+
+            <img src="{{ x.imagen }}" alt="{{ x.nombre }}" onerror="this.style.display='none'; this.parentElement.innerHTML='✨'"> <!--  Carga la imagen de la pelicula  -->
+        </div>
+        <div class="card-content"> <!--  Inicia entorno para mostrar los datos de la pelicuka  -->
+            <h4 style="font-family:'Welcome Drama Regular';font-weight:normal;font-size:30px"><b>{{ x.nombre }}</b></h4> <!-- Muestra el nombre de la pelicula   -->
+            {% if x.director%} <!--Muestra el nombre del director de la película-->
+            <div style="font-family:'Welcome Drama Regular';font-weight:normal;font-size:24px" class="price">{{ x.director }}</div>
+            {% endif%}
+            {% if x.descripcion %} <!-- Muestra la descripcion de la pelicula   -->
+            <p style="font-family:'Welcome Drama Regular';font-weight:normal;font-size:20px" class="description">{{ x.descripcion }}</p>
+            {% endif %}<!--  Finaliza el entorno para mostrar el contenido  -->
+            <button style="font-family:'Welcome Drama Regular';font-weight:normal;font-size:24px" class="btn">Ver</button>
+        </div> <!--  Finaliza la tarjeta para mostrar el producto  -->
+    </div>
+{% endfor %}
+</div>
+
+<!-- Pie de página -->
+<div class="footer" style="font-family:'Welcome Drama Regular';font-weight:normal;font-size:24px">
+<div class="emoji">🌟✨🌈</div>
+    <a href="https://github.com/WraithLion/BCine.git">BCine</a> © 2025 by <a href="https://sites.google.com/ciencias.unam.mx/humanosoft/inicio">Humanosoft</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+<br>This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+</div>
+
+
+</html>

@@ -8,18 +8,21 @@ from .models import PelisDrama,PelisFantasia,PelisFiccion
 
 def sitio_principal(request):
     #Realización de una consulta muestra
-    peliculasD= PelisDrama.objects.all()
-    return render(request, "sitio_principal.html",{'peliculasD':peliculasD})
+    return render(request, "Sitio_principal.html")
 
-def todosproductos(request):
+def pelisDrama(request):
+    peliculasD= PelisDrama.objects.all()
+    return render(request, "Drama.html",{'peliculasD':peliculasD})
+
+def pelisFantasia(request):
     #Realización de una consulta muestra
     peliculasF= PelisFantasia.objects.all()
-    return render(request, "todos-los-productos.html",{'peliculasF':peliculasF})
+    return render(request, "Fantasia.html",{'peliculasF':peliculasF})
 
-def todosproductosNoIA(request):
+def pelisCienciaFiccion(request):
     #Realización de una consulta muestra
     peliculasFC= PelisFiccion.objects.all()
-    return render(request, "todos-los-productos-sin-IA.html",{'peliculasFC':peliculasFC})
+    return render(request, "Ciencia_Ficcion.html",{'peliculasFC':peliculasFC})
 
 def ingresar(request):
         #Realización de una consulta muestra
@@ -40,6 +43,7 @@ def ingresar(request):
         "reply": reply,
         "ts": datetime.now().isoformat()
     })
-    return render(request,"chatbot.html",{})
+    return render(request,"Chatbot.html",{})
+
 def ver(request):
     return render(request,"DetallesPelicula.html",{})

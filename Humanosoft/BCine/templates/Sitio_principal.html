@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <title>BCine</title>
 <link rel="stylesheet" href="/static/Pagina_Principal/BCine_principal.css">
 </head>
@@ -13,21 +14,30 @@
 </div>
 
 <div class="wrappper">
-        <input  hidden="" class="radio-1" name="radio" id="radio-1" type="radio" checked="" onclick="parent.location='/BCine/'"/>
+        <input  hidden="" class="radio-1" name="radio" id="radio-1" type="radio" checked="" onclick="parent.location=''"/>
         <label style="--index: 0;" class="label" for="radio-1"><span>Inicio</span></label>
 
-        <input hidden="" class="radio-2" name="radio" id="radio-2" type="radio" onclick="parent.location='/BCine/Drama'"/>
-        <label style="--index: 1;" class="label" for="radio-2"><span>Generos</span></label>
 
+
+        <input hidden="" class="radio-2" name="radio" id="radio-2" type="radio" onclick="listas"/>
+
+        <label style="--index: 1;" class="label"  for="radio-2"><span>
+          <div class="dropdown">
+            <button class="dropbtn label">Generos
+              <i class="fa fa-caret-down"></i>
+            </button>
+              <div class="dropdown-content label" id="listas">
+                <a href="/BCine/Drama">Drama</a>
+                <a href="/BCine/Fantasia">Fantasia</a>
+                <a href="/BCine/Ciencia-Ficcion">Ciencia Ficcion</a>
+              </div>
+          </div></span></label>
         <input hidden="" class="radio-3" name="radio" id="radio-3" type="radio" onclick="parent.location='/BCine/Cuenta'"/>
         <label style="--index: 2;"  class="label" for="radio-3"><span >Cuenta</span></label>
-
         <div class="bar"></div>
         <div class="slidebar"></div>
 </div>
-
-
-
+<br></br>
 
 <!-- Contenedor de productos -->
 <div id="contenedor" class="container">

@@ -4,7 +4,7 @@ from . import views
 app_name = 'BCine'
 urlpatterns = [
 # Página principal de cine
-path('BCine/', views.sitio_principal, name='sitio_principal'),
+path('', views.sitio_principal, name='sitio_principal'),
 
 
 path('BCine/Drama/',views.pelisDrama,name='sitio_drama'),
@@ -16,7 +16,7 @@ path('BCine/Ciencia-Ficcion/',views.pelisCienciaFiccion,name='sitio_ciencia_ficc
 
 path('BCine/Cuenta/',views.ingresar,name='chatbot'),
 
-path('ver/',views.ver,name='Detalles_Pelicula'),
+path('BCine/ver/',views.ver,name='Detalles_Pelicula'),
 
 
 ]

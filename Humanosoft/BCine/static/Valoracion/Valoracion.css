@@ -1,0 +1,186 @@
+.header {
+  text-align: center;
+  width:auto;
+  padding: 2px 2px;
+  background: linear-gradient(135deg, #fbbd61);
+  border-radius: 20px;
+  margin-bottom: 0;
+  box-shadow: 0 12px 32px rgba(255, 107, 157, 0.3);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Cinema St Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Cinema St Regular'), url('cinema_st.woff') format('woff');
+}
+
+#half-stars-example {
+
+/*  display:inline-flex para evitar problemas de espacios en blanco.
+ *
+ */
+  .rating-group {
+    display: inline-flex;
+  }
+
+  /* Efecto para mostrar las estrellas que recorre el cursor del usuario */
+  .rating__icon {
+    pointer-events: none;
+  }
+
+  /* deja de resaltar cuando el usuario no ha seleccionado un puntaje*/
+  .rating__input {
+   position: absolute !important;
+   left: -9999px !important;
+  }
+
+  /* Ajuste de iconos */
+  .rating__label {
+    cursor: pointer;
+    /* Recorrido de estrellas de izquierda a derecha */
+    padding: 0 0.1em;
+    font-size: 2rem;
+  }
+
+  /* Formato de relleno para medias estrellas*/
+  .rating__label--half {
+    padding-right: 0;
+    margin-right: -0.6em;
+    z-index: 2;
+  }
+
+  /* color de la estrella */
+  .rating__icon--star {
+    color: orange;
+  }
+
+  /* remocion de color cuando no seleccionado un puntaje */
+  .rating__icon--none {
+    color: #eee;
+  }
+
+  /* Resalta en rojo si no ha valorado la pelicula */
+  .rating__input--none:checked + .rating__label .rating__icon--none {
+    color: red;
+  }
+
+  /* Resalta las estrellas que no fueron coloreadas a gris*/
+  .rating__input:checked ~ .rating__label .rating__icon--star {
+    color: #ddd;
+  }
+
+  /* Colorean las estrellas hasta acorde a la posicion de la barra de valoracion */
+  .rating-group:hover .rating__label .rating__icon--star,
+  .rating-group:hover .rating__label--half .rating__icon--star {
+    color: orange;
+  }
+
+  /* Resalta en gris las demas estrellas fuera del alcance, al pasar por el cursor*/
+  .rating__input:hover ~ .rating__label .rating__icon--star,
+  .rating__input:hover ~ .rating__label--half .rating__icon--star {
+    color: #ddd;
+  }
+
+  /* Coloreado de estrellas a gris predeterminado al cargar la pagina */
+  .rating-group:hover .rating__input--none:not(:hover) + .rating__label .rating__icon--none {
+     color: #eee;
+  }
+
+  /* Icono en rojo para resaltar que no ha valorado la pelicula */
+  .rating__input--none:hover + .rating__label .rating__icon--none {
+    color: red;
+  }
+}
+
+.wrappper {
+  display: inline-block;
+  align-items: center;
+  padding: 4px 8px;
+  position: relative;
+  background: #e8e8e8;
+  border-radius: 10px;
+  max-width: 100%;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  top: 0;
+  z-index: 1;
+}
+
+.label {
+  cursor: pointer;
+  outline: none;
+  font-size: 2rem;
+  letter-spacing: initial;
+  font-weight: 500;
+  color: #212121;
+  background: transparent;
+  padding: 12px 16px;
+  width: auto;
+  min-width: 100px;
+  text-decoration: none;
+  -webkit-user-select: none;
+  user-select: none;
+  transition: color 0.25s ease;
+  outline-offset: -6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.label span {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+/* Tipografia para BCine Sitio Principal */
+@font-face {
+  font-family: 'Cinema St Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Cinema St Regular'), url('cinema_st.woff') format('woff');
+}
+
+label,
+textarea {
+  font-size: 2rem;
+  letter-spacing: 1px;
+  align-items:center;
+}
+
+textarea {
+  padding: 10px;
+  max-width: 100%;
+  line-height: 1.5;
+  border-radius: 5px;
+  border: 1px solid #cccccc;
+  box-shadow: 1px 1px 1px #999999;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+html,
+body {
+  display: grid;
+  height: 100%;
+  place-items: center;
+  background-color: #d8d8d8;
+}
+.footer {
+  text-align: center;
+  padding: 20px 10px;
+  margin-top: 60px;
+  background: linear-gradient(135deg, #d8d8d8);
+  border-radius: 20px;
+}

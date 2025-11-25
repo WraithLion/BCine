@@ -9,15 +9,21 @@
 </head>
 
 <body>
+<!--Encabezado de pagina con titulo del genero seleccionado-->
 <div class="header">
     <p style="font-family:'Cinema St Regular';font-weight:normal;font-size:56px">BCine</p>
 </div>
 
+<!--Menu de navegacion horizontal del sitio con tres opciones-->
+
 <div class="wrappper">
+
+        <!--Opcion para dirigir a la pagina principal de BCine-->
+
         <input  hidden="" class="radio-1" name="radio" id="radio-1" type="radio" checked="" onclick="parent.location=''"/>
         <label style="--index: 0;" class="label" for="radio-1"><span>Inicio</span></label>
 
-
+        <!--Opcion desplegable que muestra los generos disponibles en el sitio-->
 
         <input hidden="" class="radio-2" name="radio" id="radio-2" type="radio" onclick="listas"/>
 
@@ -27,45 +33,29 @@
               <i class="fa fa-caret-down"></i>
             </button>
               <div class="dropdown-content label" id="listas">
-                <a href="/BCine/Drama">Drama</a>
-                <a href="/BCine/Fantasia">Fantasia</a>
-                <a href="/BCine/Ciencia-Ficcion">Ciencia Ficcion</a>
+                <a href="/BCine/Drama">Drama</a>  <!--Opcion para ver las peliculas de genero Drama-->
+                <a href="/BCine/Fantasia">Fantasia</a>  <!--Opcion para ver las peliculas de genero Fantasia-->
+                <a href="/BCine/Ciencia-Ficcion">Ciencia Ficcion</a>  <!--Opcion para ver las peliculas de genero Ciencia Ficcion-->
               </div>
           </div></span></label>
+
+        <!--Opcion para "Crear Cuenta" e "Iniciar sesión" utilizando chatbot -->
+
         <input hidden="" class="radio-3" name="radio" id="radio-3" type="radio" onclick="parent.location='/BCine/Cuenta'"/>
         <label style="--index: 2;"  class="label" for="radio-3"><span >Cuenta</span></label>
-        <div class="bar"></div>
-        <div class="slidebar"></div>
+
+        <div class="bar"></div> <!--Resaltado de la opcion de navegacion por el cursor sobre una opcion del menu-->
+
+        <div class="slidebar"></div> <!--Resaltado de la opcion seleccionada de menu por el usuario-->
+
 </div>
 <br></br>
-
-<!-- Contenedor de productos -->
-<div id="contenedor" class="container">
-{% for x in peliculasD %}
-    <div class="card" data-nombre="{{ x.nombre }}">
-        <div class="card-image">
-            <!-- Django static file syntax preserved -->
-            <img src="{{ x.imagen }}" alt="{{ x.nombre }}" onerror="this.style.display='none'; this.parentElement.innerHTML='✨'">
-        </div>
-        <div class="card-content">
-            <h4><b>{{ x.nombre }}</b></h4>
-            {% if x.descripcion %}
-            <p class="description">{{ x.descripcion }}</p>
-            {% endif %}
-            <div class="price">{{ x.director }}</div>
-            <button class="btn">Ver más</button>
-        </div>
-    </div>
-{% endfor %}
-</div>
-<!--<button id="masPelis" class="loadMore">  Más películas </button>-->
 
 <!-- Pie de página -->
 <div class="footer" style="font-family:'Cinema St Regular';font-weight:normal;font-size:20px">
     <a href="https://github.com/WraithLion/BCine.git">BCine</a> © 2025 by <a href="https://sites.google.com/ciencias.unam.mx/humanosoft/inicio">Humanosoft</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
 <br>This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
 </div>
-<!--<script src="/static/MostrarMas.js"></script>-->
 
 
 </body>

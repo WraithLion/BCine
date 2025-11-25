@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-	'BCine'
+	'BCine' #Instalacion de la aplicacion web BCine
 ]
 
 MIDDLEWARE = [

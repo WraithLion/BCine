@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="/static/Pagina_Fantasia/Fantasia.css">
-<title>BCine - Peliculas Fantasía</title>
+<title>BCine - Fantasía</title>
 
 </head>
 
@@ -31,7 +31,7 @@
             {% if x.descripcion %}
             <p style="font-family:'Magic School One Regular';font-weight:normal;font-size:24px" class="description">{{ x.descripcion }}</p>
             {% endif %}
-            <button style="font-family:'Magic School One Regular';font-weight:normal;font-size:28px" class="btn">Ver</button>
+            <button style="font-family:'Magic School One Regular';font-weight:normal;font-size:28px" class="btn" onclick="parent.location='/BCine/ver/'">Ver</button>
         </div>
     </div>
 {% endfor %}
@@ -44,24 +44,7 @@
 <br>This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
 </div>
 
-<script>
-// Animación suave al cargar las tarjetas
-document.addEventListener('DOMContentLoaded', function() {
-    const cards = document.querySelectorAll('.card');
-    cards.forEach((card, index) => {
-        card.style.animationDelay = `${index * 0.05}s`;
-    });
-    
-    // Funcionalidad del botón añadir al carrito
-    document.querySelectorAll('.btn').forEach(btn => {
-        btn.addEventListener('click', function(e) {
-            e.preventDefault();
-            // Aquí puedes agregar la funcionalidad de Django para añadir al carrito
-            alert('¡Producto añadido al carrito! 🎉');
-        });
-    });
-});
-</script>
+
 
 </body>
 </html>

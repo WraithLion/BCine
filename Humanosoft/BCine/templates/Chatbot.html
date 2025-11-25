@@ -3,24 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Chatbot UI</title>
-    <link rel="stylesheet" href="/static/Chatbot.css">
+    <link rel="stylesheet" href="/static/Chatbot.css"> <!--Importa los estilos para dar formato a la pagina del Chatbot-->
 </head>
 <body>
-    <div class="container">
+    <div class="container"> <!--Inicializa el contenedor-->
         <header>
-            <h1>Chatbot</h1>
-            <button id="theme-toggle" class="secondary small-btn">C</button>
+            <h1>Chatbot</h1>    <!--Titulo de la ventana-->
+            <button id="theme-toggle" class="secondary small-btn">C</button> <!--Boton que cambia el tema colores claro a oscuro y viceversa-->
         </header>
 
-        <main id="chat-container">
+        <main id="chat-container"> <!--Cuadro de texto para conversar con el chatbot-->
             <div id="chat-history" aria-live="polite"></div>
             <div class="input-area">
-                <input type="text" id="chat-input" placeholder="Escribe un mensaje...">
-                <button id="send-btn">Enviar</button>
-                <button id="reset-btn" class="secondary">Reiniciar</button>
+                <input type="text" id="chat-input" placeholder="Escribe un mensaje..."> <!--Mensaje para indicar al usuario que puede escribir en el campo-->
+                <button id="send-btn">Enviar</button> <!--Boton para enviar mensaje y esperar respuesta por parte del chatbot-->
+                <button id="reset-btn" class="secondary">Reiniciar</button> <!--Boton para empezar una nueva conversación con el chatbot-->
             </div>
         </main>
     </div>
-    <script src="/static/app.js"></script>
+    <script src="/static/app.js"></script>  <!--Ruta para cargar las respuestas ante las acciones realizadas en la pagina por el usuario-->
 </body>
 </html>

@@ -8,7 +8,7 @@
   <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"/>
   <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"/>
 </svg>
-<title>BCine - Peliculas Drama</title>
+<title>BCine - Drama</title>
 </head>
 <body>
 <!-- Encabezado de la página -->
@@ -33,7 +33,7 @@
             {% if x.descripcion %} <!-- Muestra la descripcion de la pelicula   -->
             <p style="font-family:'Welcome Drama Regular';font-weight:normal;font-size:20px" class="description">{{ x.descripcion }}</p>
             {% endif %}<!--  Finaliza el entorno para mostrar el contenido  -->
-            <button style="font-family:'Welcome Drama Regular';font-weight:normal;font-size:24px" class="btn">Ver</button>
+            <button style="font-family:'Welcome Drama Regular';font-weight:normal;font-size:24px" class="btn" onclick="parent.location='/BCine/ver/'">Ver</button>
         </div> <!--  Finaliza la tarjeta para mostrar el producto  -->
     </div>
 {% endfor %}

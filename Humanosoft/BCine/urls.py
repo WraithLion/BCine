@@ -29,5 +29,9 @@ path('BCine/Cuenta/',views.ingresar,name='chatbot'),
 
 path('BCine/ver/',views.ver,name='Detalles_Pelicula'),
 
+# Direccion api
+
+path('api/message',views.ingresar, name='chatbot'),
+
 
 ]

@@ -1,7 +1,11 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 import aiml #Para usar la app
-from .models import PelisDrama,PelisFantasia,PelisFiccion   #Importa los modelos con los datos de cada Género de pelicula - Drama   Fantasia    Ciencia Ficcion
+from django.http import JsonResponse
+from datetime import datetime
+import json
+from django.views.decorators.csrf import ensure_csrf_cookie
+from .models import PelisDrama, PelisFantasia, PelisFiccion   #Importa los modelos con los datos de cada Género de pelicula - Drama   Fantasia    Ciencia Ficcion
 # Create your views here.
 
 #Sitio principal de BCine
@@ -31,16 +35,17 @@ def pelisCienciaFiccion(request):
     peliculasFC= PelisFiccion.objects.all()
     return render(request, "Ciencia_Ficcion.html",{'peliculasFC':peliculasFC})
 
-#Sitio para Cuenta e interaccion con chatbot
+    #Realización de una consulta muestra
+botAIML = aiml.Kernel()
+botAIML.learn("./BCine/aiml/startup.aiml") #Ruta del archivo aiml para inicializar el Chatbot
+botAIML.respond("LOAD AIML BRAIN") #Carga sus datos de conocimiento
 
+#Sitio para Cuenta e interaccion con chatbot
+@ensure_csrf_cookie
 def ingresar(request):
-        #Realización de una consulta muestra
-    botAIML = aiml.Kernel()
-    botAIML.learn("./BCine/aiml/startup.aiml") #Ruta del archivo aiml para inicializar el Chatbot
-    botAIML.respond("LOAD AIML BRAIN") #Carga sus datos de conocimiento
     if request.method =='POST': #Realiza una petición para responder
-        data = request.method('POST')
-        user_message =data.get("message", "") #Lee la respuesta ingresada del usuario
+        data = json.loads(request.body)
+        user_message = data.get("message", "") #Lee la respuesta ingresada del usuario
 
         respuesta = botAIML.respond(user_message.upper()) #Analiza el mensaje para emitir una respuesta adecuada
 
@@ -48,11 +53,11 @@ def ingresar(request):
             reply = respuesta.capitalize() #En caso de encontrar la respuesta a su peticion responde con un mensaje con la información
         else:
             reply = "No te entendi, lo siento." #En caso contrario mostrará un mensaje de no entendimiento
-        return jsonify({
+        return JsonResponse({
         "reply": reply,     #Devuelve el mensaje en formato respuesta
         "ts": datetime.now().isoformat() #Acompaña la respuesta con la hora en que fue emitido
     })
-    return render(request,"Chatbot.html",{})    #Renderiza la pagina para interactuar con el chatbot
+    return render(request,"Chatbot.html",)    #Renderiza la pagina para interactuar con el chatbot
 
 #Sitio para mostrar de la pelicula seleccionada por el usuario
 #Ver pelicula

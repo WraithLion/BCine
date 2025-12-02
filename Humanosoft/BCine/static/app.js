@@ -3,6 +3,9 @@ const input = document.getElementById("chat-input");
 const sendBtn = document.getElementById("send-btn");
 const resetBtn = document.getElementById("reset-btn");
 const themeToggle = document.getElementById("theme-toggle");
+const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+
+
 
 function addMessage(sender, text, type = "user") {
     const div = document.createElement("div");
@@ -24,7 +27,7 @@ async function sendMessage() {
     try {
         const res = await fetch("/api/message", {
             method: "POST",
-            headers: { "Content-Type": "application/json" },
+            headers: { "Content-Type": "application/json","X-CSRFToken":csrftoken},
             body: JSON.stringify({ message: msg })
         });
         const data = await res.json();

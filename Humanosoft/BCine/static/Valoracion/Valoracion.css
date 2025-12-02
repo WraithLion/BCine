@@ -1,12 +1,71 @@
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  background-color: black;
+}
+
+/*Formato y posicion del video*/
+
+.video-container {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center; /* Centra el video si es inline */
+}
+
+video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Estilo para el textarea */
+textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 32px;
+  font-family: 'Cinema St Regular';
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  resize: vertical; /* Permite redimensionar solo en altura. Usa 'none' para desactivar */
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 8px;
+}
+
+/* Estado al enfocar (focus) */
+textarea:focus {
+  outline: none;
+  border-color: #4CAF50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+p{
+  font-size: 32px;
+  font-family: 'Cinema St Regular';
+  font-weight:normal
+}
+
 .header {
   text-align: center;
   width:auto;
   padding: 2px 2px;
-  background: linear-gradient(135deg, #fbbd61);
+  background: linear-gradient(135deg, #ec7532,#fbbd61);
   border-radius: 20px;
   margin-bottom: 0;
   box-shadow: 0 12px 32px rgba(255, 107, 157, 0.3);
 }
+
+
+
+
 
 * {
   padding: 0;
@@ -101,7 +160,7 @@
   align-items: center;
   padding: 4px 8px;
   position: relative;
-  background: #e8e8e8;
+  background: #212121;
   border-radius: 10px;
   max-width: 100%;
   scrollbar-width: none;
@@ -113,7 +172,7 @@
 .label {
   cursor: pointer;
   outline: none;
-  font-size: 2rem;
+  font-size: 32px;
   letter-spacing: initial;
   font-weight: 500;
   color: #212121;
@@ -149,34 +208,7 @@
   src: local('Cinema St Regular'), url('cinema_st.woff') format('woff');
 }
 
-label,
-textarea {
-  font-size: 2rem;
-  letter-spacing: 1px;
-  align-items:center;
-}
 
-textarea {
-  padding: 10px;
-  max-width: 100%;
-  line-height: 1.5;
-  border-radius: 5px;
-  border: 1px solid #cccccc;
-  box-shadow: 1px 1px 1px #999999;
-}
-
-label {
-  display: block;
-  margin-bottom: 10px;
-}
-
-html,
-body {
-  display: grid;
-  height: 100%;
-  place-items: center;
-  background-color: #d8d8d8;
-}
 .footer {
   text-align: center;
   padding: 20px 10px;

@@ -16,25 +16,32 @@
 </div>
 
 <!--Cuadro para cargar la pelicula-->
+{% load static %}
 
-<video width="400" height="240" controls>
-  <source src="/media/Drama/BCine.mp4" type="video/mp4"/>
-  Por favor actualiza tu navegador para ver videos
-</video>
+<div class="video-container">
+  <video controls width="80%">
+    <source src="{% static 'videos/BCine.mp4' %}" type="video/mp4">
+    Tu navegador no soporta el elemento de video.
+  </video>
+</div>
 
-<!--Texto para indicar al usuario una invitacion a valorar la pelicula-->
-
-<label for="story">Comparte tu experiencia de la pelicula</label>
-
+<!--Texto para hacer una invitacion al usuario para valorar la pelicula-->
+<div class="header">
+    <p style="font-family:'Cinema St Regular';font-weight:normal;font-size:32px">Comparte tu experiencia</p>
+    <p >Tu opinion acerca de la pelicula:</p>
+</div>
 
 <!--Cuadro de texto para que el usuario pueda ingresar su opinion sobre la pelicula-->
-
-<textarea id="story" name="story" rows="5" cols="33">
-Escribe tu opinion aqui...
-</textarea>
+<textarea
+  id="story"
+  name="story"
+  rows="5"
+  cols="33"
+  placeholder="Escribe tu opinion aqui..."
+></textarea>
 
 <!--Sistema de puntaje para pelicula estrellas completas y a medias-->
-
+<div class="header" style="background: linear-gradient(135deg, #000000);">
 <div id="half-stars-example">
     <div class="rating-group">
         <input class="rating__input rating__input--none" checked name="rating2" id="rating2-0" value="0" type="radio">
@@ -61,6 +68,7 @@ Escribe tu opinion aqui...
         <input class="rating__input" name="rating2" id="rating2-50" value="5" type="radio">
     </div>
   <p class="desc" style="margin-bottom: 2rem; font-family: sans-serif; font-size:0.9rem"></p>
+</div>
 </div>
 </wrappper>
 

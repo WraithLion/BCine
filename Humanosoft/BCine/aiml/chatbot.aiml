@@ -5,10 +5,8 @@
   <category>
     <pattern>HOLA</pattern>
     <template>
-      Hola, soy Cine-B, ¿Qué deseas hacer?<star/>.
-      <button>
-        <text>Crear cuenta</text><star/>
-        </button>
+      Hola, soy Cine-B, ¿Qué deseas hacer? Crear cuenta
+      Iniciar Sesión.
     </template>
   </category>
 <!-- Buenos días -->
@@ -98,6 +96,11 @@
 <!-- Sinonimos para el saludo  -->
 <category>
   <pattern>SOY NUEVO</pattern>
+  <template><srai>CREAR CUENTA</srai></template>
+</category>
+
+<category>
+  <pattern>CUENTA NUEVA</pattern>
   <template><srai>CREAR CUENTA</srai></template>
 </category>
 
@@ -194,6 +197,21 @@
 </category>
 
 <category>
+  <pattern>BIEN</pattern>
+  <template><srai>EMPEZAR</srai></template>
+</category>
+
+<category>
+  <pattern>LISTO</pattern>
+  <template><srai>EMPEZAR</srai></template>
+</category>
+
+<category>
+  <pattern>PREPARADO</pattern>
+  <template><srai>EMPEZAR</srai></template>
+</category>
+
+<category>
   <pattern>CUANDO QUIERAS</pattern>
   <template><srai>EMPEZAR</srai></template>
 </category>
@@ -248,17 +266,42 @@
   <template><srai>EMPEZAR</srai></template>
 </category>
 
-<!-- Sinonimos para empezar a crear la cuenta -->
+<!-- Captura de datos de la cuenta -->
 
 <category>
   <pattern>MI USUARIO ES *</pattern>
-  <template>Muy bien, ahora escribe tu nueva contraseña</template>
+  <template>
+    <think><set name="usuario"><star/></set></think>
+    Muy bien <get name="usuario"/>, ahora escribe tu nueva contraseña
+  </template>
 </category>
 
 <category>
+  <pattern>MI NOMBRE DE USUARIO ES *</pattern>
+    <template>
+      <condition name="usuario">
+        <li value="unknown">Lo siento, ese usuario no está registrado</li>
+        <li> ¡Hola <get name="usuario"/>, nos alegra que estés aquí! ¡Prepara las palomitas y disfruta de las películas!</li>
+      </condition>
+    </template>
+  </category>
+
+
+<category>
   <pattern>ES *</pattern>
-  <template>Genial, vamos a darte de alta
-  ¡Listo!, ya estás registrado, ahora puedes iniciar sesión con tu nueva cuenta. ¡Bienvenido a BCine!</template>
+  <template>
+    <think><set name="contraseña"><star/></set></think>Genial, vamos a darte de alta
+  ¡Listo!, ya estás registrado , ahora puedes iniciar sesión con tu nueva cuenta. ¡Bienvenido a BCine!</template>
+</category>
+
+<category>
+  <pattern>MI CONTRASEÑA ES *</pattern>
+  <template>
+    <condition name="contraseña">
+      <li value="unknown">Lo siento, ese usuario no está registrado</li>
+      <li> ¡Hola <get name="nombre"/>, nos alegra que estés aquí! ¡Prepara las palomitas y disfruta de las películas!</li>
+    </condition>
+  </template>
 </category>
 <!-- Opcion para iniciar sesión -->
 
@@ -320,11 +363,6 @@
 <category>
   <pattern>COMENZAR</pattern>
   <template>Empecemos, primero, escribe tu nombre de usuario</template>
-</category>
-
-<category>
-  <pattern>MI USUARIO ES *</pattern>
-  <template>Muy bien, ahora escribe tu contraseña</template>
 </category>
 
 

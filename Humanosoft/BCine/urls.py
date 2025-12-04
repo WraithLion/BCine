@@ -27,7 +27,11 @@ path('BCine/Cuenta/',views.ingresar,name='chatbot'),
 
 # Página para mostrar detalles de la pelicula seleccionada por el usuario
 
-path('BCine/ver/',views.ver,name='Detalles_Pelicula'),
+path('BCine/Drama/ver/',views.verDrama,name='Detalles_Pelicula_Drama'),
+
+path('BCine/Ficcion/ver/',views.verFiccion,name='Detalles_Pelicula_Ficcion'),
+
+path('BCine/Fantasia/ver/',views.verFantasia,name='Detalles_Pelicula_Fantasia'),
 
 # Direccion api
 

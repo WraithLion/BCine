@@ -141,5 +141,11 @@ def ingresar(request):
 #Escribir una reseña
 #Valorar con una puntuación en estrellas
 
-def ver(request):
-    return render(request,"VerPelicula.html",{})
+def verDrama(request):
+    return render(request,"VerPeliculaDrama.html",{})
+
+def verFiccion(request):
+    return render(request,"VerPeliculaFiccion.html",{})
+
+def verFantasia(request):
+    return render(request,"VerPeliculaFantasia.html",{})

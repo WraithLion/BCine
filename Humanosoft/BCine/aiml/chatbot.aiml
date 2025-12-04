@@ -4,10 +4,11 @@
   <!-- Saludos -->
   <category>
     <pattern>HOLA</pattern>
-    <template>Hola, soy Cine-B, ¿Qué deseas hacer? Crear cuenta Iniciar Sesión
-    <button>
-    <text>Crear cuenta</text>
-    </button>
+    <template>
+      Hola, soy Cine-B, ¿Qué deseas hacer?<star/>.
+      <button>
+        <text>Crear cuenta</text><star/>
+        </button>
     </template>
   </category>
 <!-- Buenos días -->
@@ -15,21 +16,30 @@
   <pattern>BUENOS DIAS</pattern>
   <template>
     <random>
-      <li>¡Buenos días! ¿Cómo estás? Mi nombre es Cine-B, y seré tu ayudante ¿Qué deseas hacer?</li>
-      <button>
-        <text>Crear cuenta</text>
-      </button>
-      <li>¡Buenos días! Soy Cine-B, ¿Qué deseas hacer?</li>
-      <button>
-        <text>Crear cuenta</text>
-      </button>
+      <li>¡Buenos días! ¿Cómo estás? Mi nombre es Cine-B, y seré tu ayudante ¿Qué deseas hacer?
+        Crear cuenta
+        Iniciar Sesión
+        </li>
+        <li>¡Buenos días! Soy Cine-B, ¿Qué deseas hacer?
+          Crear cuenta
+          Iniciar Sesión</li>
     </random>
   </template>
 </category>
 
 <category>
   <pattern>BUENAS TARDES</pattern>
-  <template>¡Buenas tardes! ¿En qué puedo ayudarte?</template>
+  <template>
+    <random>
+      <li>¡Buenas tardes! ¿Cómo estás? Mi nombre es Cine-B, y seré tu ayudante ¿Qué deseas hacer?
+        Crear cuenta
+        Iniciar Sesión</li>
+      <li>¡Buenas! ¡Soy Cine-B!, ¿Qué deseas hacer?
+        Crear cuenta
+        Iniciar Sesión
+        </li>
+    </random>
+  </template>
 </category>
 
 <!-- Despedidas -->
@@ -43,13 +53,37 @@
   <template>¡Hasta pronto! Vuelve cuando quieras.</template>
 </category>
 
-<!--USO DE WILDCARDS(*)-->
-<!-- Capturar nombre -->
+
+<!-- Sinonimos para el saludo  -->
 <category>
-  <pattern>MI NOMBRE ES *</pattern>
-  <template>Encantado de conocerte, <star/>. ¿En qué puedo ayudarte hoy?</template>
+  <pattern>QUE ONDA</pattern>
+  <template><srai>HOLA</srai></template>
 </category>
 
+<category>
+  <pattern>SALUDOS</pattern>
+  <template><srai>HOLA</srai></template>
+</category>
+
+<category>
+  <pattern>HOLA CINEB</pattern>
+  <template><srai>HOLA</srai></template>
+</category>
+
+<category>
+  <pattern>BUEN DIA</pattern>
+  <template><srai>BUENOS DIAS</srai></template>
+</category>
+
+<category>
+  <pattern>BUENAS</pattern>
+  <template><srai>BUENAS TARDES</srai></template>
+</category>
+
+<category>
+  <pattern>HOLA QUE TAL</pattern>
+  <template><srai>HOLA</srai></template>
+</category>
 
 
 <!-- Respuesta ante la opción crear cuenta -->
@@ -61,14 +95,160 @@
     Cunado estés listo, escribe comenzar</template>
 </category>
 
+<!-- Sinonimos para el saludo  -->
+<category>
+  <pattern>SOY NUEVO</pattern>
+  <template><srai>CREAR CUENTA</srai></template>
+</category>
+
+<category>
+  <pattern>SOY NUEVO, QUIERO HACER UNA CUENTA NUEVA</pattern>
+  <template><srai>CREAR CUENTA</srai></template>
+</category>
+
+<category>
+  <pattern>QUIERO CREAR UNA CUENTA</pattern>
+  <template><srai>CREAR CUENTA</srai></template>
+</category>
+
+<category>
+  <pattern>QUIERO UNA CUENTA</pattern>
+  <template><srai>CREAR CUENTA</srai></template>
+</category>
+
+<category>
+  <pattern>ME GUSTARIA CREAR UNA CUENTA</pattern>
+  <template><srai>CREAR CUENTA</srai></template>
+</category>
+
+<category>
+  <pattern>NO TENGO UNA CUENTA, QUIERO HACER UNA</pattern>
+  <template><srai>CREAR CUENTA</srai></template>
+</category>
+
+<category>
+  <pattern>COMO HAGO UNA CUENTA</pattern>
+  <template><srai>CREAR CUENTA</srai></template>
+</category>
+
+<category>
+  <pattern>ME GUSTARIA HACER UNA CUENTA</pattern>
+  <template><srai>CREAR CUENTA</srai></template>
+</category>
+
+<category>
+  <pattern>UNA NUEVA CUENTA</pattern>
+  <template><srai>CREAR CUENTA</srai></template>
+</category>
+
+<category>
+  <pattern>PUEDO HACER UNA</pattern>
+  <template><srai>CREAR CUENTA</srai></template>
+</category>
+
+<category>
+  <pattern>ME AYUDAS A CREAR UNA</pattern>
+  <template><srai>CREAR CUENTA</srai></template>
+</category>
+
+<category>
+  <pattern>COMO LE HAGO PARA HACE UNA CUENTA</pattern>
+  <template><srai>CREAR CUENTA</srai></template>
+</category>
+
+<category>
+  <pattern>DAME UNA CUENTA</pattern>
+  <template><srai>CREAR CUENTA</srai></template>
+</category>
+
+<category>
+  <pattern>HAZME UNA CUENTA</pattern>
+  <template><srai>CREAR CUENTA</srai></template>
+</category>
+
+<category>
+  <pattern>QUIERO QUE ME CREES UNA CUENTA</pattern>
+  <template><srai>CREAR CUENTA</srai></template>
+</category>
+
+<category>
+  <pattern>UNA NUEVA CUENTA POR FAVOR</pattern>
+  <template><srai>CREAR CUENTA</srai></template>
+</category>
+
+<category>
+  <pattern>ME PODRIAS HACER UNA CUENTA POR FAVOR</pattern>
+  <template><srai>CREAR CUENTA</srai></template>
+</category>
+
 <!-- Respuesta ante empezar la cuenta -->
-
-
 
 <category>
   <pattern>EMPEZAR</pattern>
   <template>Empecemos, primero, escribe tu nombre de usuario</template>
 </category>
+
+<category>
+  <pattern>ESTOY LISTO</pattern>
+  <template><srai>EMPEZAR</srai></template>
+</category>
+
+<category>
+  <pattern>CUANDO QUIERAS</pattern>
+  <template><srai>EMPEZAR</srai></template>
+</category>
+
+<category>
+  <pattern>DALE</pattern>
+  <template><srai>EMPEZAR</srai></template>
+</category>
+
+<category>
+  <pattern>VAMOS</pattern>
+  <template><srai>EMPEZAR</srai></template>
+</category>
+
+<category>
+  <pattern>EMPECEMOS HACER MI CUENTA</pattern>
+  <template><srai>EMPEZAR</srai></template>
+</category>
+
+<category>
+  <pattern>QUE SEA RAPIDO</pattern>
+  <template><srai>EMPEZAR</srai></template>
+</category>
+
+<category>
+  <pattern>CLARO VAMOS</pattern>
+  <template><srai>EMPEZAR</srai></template>
+</category>
+
+<category>
+  <pattern>ESTOY PREPARADO</pattern>
+  <template><srai>EMPEZAR</srai></template>
+</category>
+
+<category>
+  <pattern>YA QUIERO MI CUENTA</pattern>
+  <template><srai>EMPEZAR</srai></template>
+</category>
+
+<category>
+  <pattern>ANDALE</pattern>
+  <template><srai>EMPEZAR</srai></template>
+</category>
+
+<category>
+  <pattern>CUANDO TU DIGAS</pattern>
+  <template><srai>EMPEZAR</srai></template>
+</category>
+
+<category>
+  <pattern>VAMOS ESTOY LISTO</pattern>
+  <template><srai>EMPEZAR</srai></template>
+</category>
+
+<!-- Sinonimos para empezar a crear la cuenta -->
 
 <category>
   <pattern>MI USUARIO ES *</pattern>
@@ -77,15 +257,9 @@
 
 <category>
   <pattern>ES *</pattern>
-  <template>Genial, vamos a darte de alta</template>
+  <template>Genial, vamos a darte de alta
+  ¡Listo!, ya estás registrado, ahora puedes iniciar sesión con tu nueva cuenta. ¡Bienvenido a BCine!</template>
 </category>
-
-<category>
-  <pattern>ESPERO</pattern>
-  <template>¡Listo!, ya estás registrado, ahora puedes iniciar sesión con tu nueva cuenta. ¡Bienvenido a BCine!</template>
-</category>
-
-
 <!-- Opcion para iniciar sesión -->
 
 <category>
@@ -94,6 +268,53 @@
     Usuario
     Contraseña
     Cunado estés listo, escribe comenzar</template>
+</category>
+
+<!-- Sinonimos para indicar la opcion de iniciar sesión -->
+
+<category>
+  <pattern>YA TENGO CUENTA</pattern>
+  <template><srai>INICIAR SESION</srai></template>
+</category>
+
+<category>
+  <pattern>QUIERO INICIAR SESION</pattern>
+  <template><srai>INICIAR SESION</srai></template>
+</category>
+
+<category>
+  <pattern>VOY A INICIAR SESION</pattern>
+  <template><srai>INICIAR SESION</srai></template>
+</category>
+
+<category>
+  <pattern>ME AYUDAS A INGRESAR POR FAVOR</pattern>
+  <template><srai>INICIAR SESION</srai></template>
+</category>
+
+<category>
+  <pattern>QUIERO INGRESAR</pattern>
+  <template><srai>INICIAR SESION</srai></template>
+</category>
+
+<category>
+  <pattern>ACABO DE CREAR UNA</pattern>
+  <template><srai>INICIAR SESION</srai></template>
+</category>
+
+<category>
+  <pattern>QUIERO INGRESAR CON MI CUENTA</pattern>
+  <template><srai>INICIAR SESION</srai></template>
+</category>
+
+<category>
+  <pattern>QUIERO INGRESAR CON MI CUENTA</pattern>
+  <template><srai>INICIAR SESION</srai></template>
+</category>
+
+<category>
+  <pattern>YA TENGO UNA CUENTA</pattern>
+  <template><srai>INICIAR SESION</srai></template>
 </category>
 
 <category>
@@ -106,14 +327,10 @@
   <template>Muy bien, ahora escribe tu contraseña</template>
 </category>
 
-<category>
-  <pattern>ES *</pattern>
-  <template>Un momento</template>
-</category>
 
 <category>
-  <pattern>BIEN</pattern>
-  <template>Hola <start/>, nos alegra que estés aquí, prepara las palomitas y disfruta de las películas.</template>
+  <pattern>BIEN *</pattern>
+  <template>Hola <star/>, nos alegra que estés aquí, prepara las palomitas y disfruta de las películas.</template>
 </category>
 
 </aiml>

@@ -1,14 +1,22 @@
 /* ====== Tema claro (default) ====== */
 body {
-    background-color: #f4f6f9;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #000000;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     height: 100vh;
-    color: #333;
+    color: black;
+}
+
+/*Fuente de letra BCine*/
+
+@font-face {
+    font-family: 'Cinema St Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Cinema St Regular'), url('cinema_st.woff') format('woff');
 }
 
 .container {
@@ -21,23 +29,26 @@ body {
 }
 
 header {
-    background: #4a90e2;
-    color: white;
+    background: #fbbd61;
+    color: black;
     padding: 12px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size:28px;
 }
 
 h1 {
     margin: 0;
     font-size: 1.2em;
+    font-family: 'Cinema St Regular';
 }
 
 #chat-container {
 display: flex;
 flex-direction: column;
-padding: 15px;
+padding: auto;
+background: #d8d8d8;
 }
 
 #chat-history {
@@ -112,7 +123,6 @@ flex: 1;
 padding: 8px;
 border-radius: 20px;
 border: 1px solid #ccc;
-font-size: 1em;
 }
 
 button {
@@ -127,6 +137,7 @@ button {
 #send-btn {
 background: #4a90e2;
 color: white;
+
 }
 
 #send-btn:hover {
@@ -134,18 +145,21 @@ background: #357abd;
 }
 
 button.secondary {
-    background: #e0e0e0;
-    color: #333;
+    background: #fbbd61;
+    color: #000000;
+
+    font-size:auto;
 }
 
 button.secondary:hover {
-    background: #c7c7c7;
+    background: #ec7532;
 }
 
 button.small-btn {
     font-size: 0.8em;
     padding: 4px 8px;
     border-radius: 12px;
+    font-family: 'Cinema St Regular';
 }
 
 /* ====== Tema oscuro (cuando body tiene .dark) ====== */
@@ -159,12 +173,17 @@ body.dark .container {
 }
 
 body.dark header {
-    background: #2a2f32;
+    background: #000000;
+    color:white;
 }
 
 body.dark #chat-history {
     border: 1px solid #333;
-    background: #121212;
+    background: #d8d8d8;
+}
+
+body.dark #chat-container {
+background: #000000;
 }
 
 body.dark .message.user .chat-bubble {
@@ -197,7 +216,7 @@ body.dark #send-btn:hover {
 }
 
 body.dark button.secondary {
-    background: #3a3a3a;
+    background: #005066;
     color: #e0e0e0;
 }
 

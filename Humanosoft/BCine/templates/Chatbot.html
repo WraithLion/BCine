@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Chatbot UI</title>
-    <link rel="stylesheet" href="/static/Chatbot.css"> <!--Importa los estilos para dar formato a la pagina del Chatbot-->
+    <link rel="stylesheet" href="/static/Cine-B/Chatbot.css"> <!--Importa los estilos para dar formato a la pagina del Chatbot-->
 </head>
 <body>
     {% csrf_token %}
     <div class="container"> <!--Inicializa el contenedor-->
         <header>
-            <h1>Chatbot</h1>    <!--Titulo de la ventana-->
+            <h1>Cine-B</h1>    <!--Titulo de la ventana-->
             <button id="theme-toggle" class="secondary small-btn">C</button> <!--Boton que cambia el tema colores claro a oscuro y viceversa-->
         </header>
 
@@ -18,10 +18,10 @@
             <div class="input-area">
                 <input type="text" id="chat-input" placeholder="Escribe un mensaje..."> <!--Mensaje para indicar al usuario que puede escribir en el campo-->
                 <button id="send-btn">Enviar</button> <!--Boton para enviar mensaje y esperar respuesta por parte del chatbot-->
-                <button id="reset-btn" class="secondary">Reiniciar</button> <!--Boton para empezar una nueva conversación con el chatbot-->
+                <button id="reset-btn" class="secondary">Borrar</button> <!--Boton para empezar una nueva conversación con el chatbot-->
             </div>
         </main>
     </div>
-    <script src="/static/app.js"></script>  <!--Ruta para cargar las respuestas ante las acciones realizadas en la pagina por el usuario-->
+    <script src="/static/Cine-B/app.js"></script>  <!--Ruta para cargar las respuestas ante las acciones realizadas en la pagina por el usuario-->
 </body>
 </html>
